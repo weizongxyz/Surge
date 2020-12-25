@@ -1,5 +1,4 @@
 #!name=Script - All in one . weizong版本
-#!system=ios
 [General]
 # > 优酷 去广告
 force-http-engine-hosts = %APPEND% vali.cp31.ott.cibntv.net
