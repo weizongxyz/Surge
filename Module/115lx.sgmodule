@@ -1,0 +1,13 @@
+#!name=115模块2
+#!desc=115APP创建离线任务
+#!system=ios
+
+[URL Rewrite]
+^https:\/\/q\.115\.com\/mapp\/\?c=feedback&m=index$ https://115.com/lx?taskdg=1 header
+
+[Script]
+115离线1 = requires-body=1,script-path=https://raw.githubusercontent.com/ikanam/Surge-Scripts/master/115lx.js,type=http-response,pattern=^http:\/\/115\.com\/lx.*$
+115离线2 = requires-body=1,script-path=https://raw.githubusercontent.com/ikanam/Surge-Scripts/master/115lx.js,type=http-response,pattern=^https?:\/\/webapi\.115\.com\/user\/check_sign.*$
+
+[MITM]
+hostname = %INSERT% *.115.com
